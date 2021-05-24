@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>recover</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <re-captcha (resolved)="captchaResolved($event)" [siteKey]="siteKey"></re-captcha>`,
+  <h1>Is captcha valid? {{isCaptchaValid | json }}</h1>
+</ion-content>

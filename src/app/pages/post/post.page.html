@@ -1,0 +1,102 @@
+<ion-content [fullscreen]="true">
+
+  <div id="header">
+    <h1>NEUER LOCAL </h1>
+    <h1>BEITRAG ERSTELLEN</h1>
+  </div>
+  <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
+
+    <div id="form">
+      <input type="text"  ngModel name="post"  placeholder="Post Titel" >
+      <!-- <app-input ngModel name="post" type="text" placeholder="Post Titel"></app-input> -->
+    </div>
+      
+  <div class="center">
+    <ion-button>Beitrag erstellen/Create Post</ion-button>
+  </div>
+  
+  </form>
+  
+     
+  
+ 
+  <div id="selectOption">
+    <ion-item lines="none">
+      <ion-label>-Wahle eine Kategorie-</ion-label>
+      <ion-select [(ngModel)]="selected_option" (ionChange)="optionChanged()">
+        <ion-select-option>-Wahle eine Kategorie1-</ion-select-option>
+        <ion-select-option>-Wahle eine Kategorie2-</ion-select-option>
+        <ion-select-option>-Wahle eine Kategorie3-</ion-select-option>
+
+      </ion-select>
+
+    </ion-item>
+  </div>
+
+  <div class="labelhear">
+    <ion-col text-center>
+      <ion-label class="user_Name">Beitragsbild</ion-label>
+    </ion-col>
+
+  </div>
+
+  <div class="cked">
+    <ckeditor [(ngModel)]="ckeditorContent">
+    </ckeditor>
+  </div>
+
+  <div id="labellast">
+    <ion-label>Show map</ion-label>
+  </div>
+  <div id="radiogroup">
+
+    <ion-radio-group>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-radio></ion-radio>
+            <ion-label>Yes</ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item lines="none">
+            <ion-radio></ion-radio>
+            <ion-label>No</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+
+    </ion-radio-group>
+  </div>
+
+  <form id="form">
+    <app-input type="text" placeholder="Website URL"></app-input>
+    <app-input type="email" placeholder="Email"></app-input>
+  </form>
+
+  <div id="selectOption">
+    <ion-item lines="none">
+      <ion-label>-Wahle Land-</ion-label>
+      <ion-select [(ngModel)]="selected_option" (ionChange)="optionChanged()">
+        <ion-select-option>-Wahle Land 1-</ion-select-option>
+        <ion-select-option>-Wahle Land 2-</ion-select-option>
+        <ion-select-option>-Wahle Land 3-</ion-select-option>
+
+      </ion-select>
+
+    </ion-item>
+  </div>
+
+  <dev class="text-center"> 
+    <div class="g-recaptcha">
+      <ngx-recaptcha2  #captchaElem [siteKey]="siteKey"></ngx-recaptcha2> 
+    </div>
+  </dev>
+
+
+
+ 
+</ion-content>

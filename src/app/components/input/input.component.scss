@@ -1,0 +1,18 @@
+
+  
+ion-item {
+    // box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.08);
+    --background: #fff;
+    height: 55px;
+    border-radius: 5px;
+    border-color: rgb(26, 25, 25);
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    ion-input {
+      color: rgb(5, 5, 5);
+    }
+  }
+  
